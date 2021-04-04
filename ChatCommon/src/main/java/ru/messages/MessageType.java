@@ -1,0 +1,13 @@
+package ru.messages;
+
+public enum MessageType {
+    PUBLIC_MESSAGE,
+    PRIVATE_MESSAGE,
+    CLIENTS_LIST_MESSAGE,
+    SEND_AUTH_MESSAGE,
+    AUTH_CONFIRM,
+    ERROR_MESSAGE,
+    NEW_NICKNAME,
+    CHANGE_NICKNAME_SUCCESS,
+
+}

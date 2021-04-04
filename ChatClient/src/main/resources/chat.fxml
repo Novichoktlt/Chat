@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.ChatController">
+    <children>
+        <HBox fx:id="authPanel">
+            <TextField fx:id="loginField" promptText="login" HBox.hgrow="ALWAYS" />
+            <PasswordField fx:id="passField" promptText="passWord" HBox.hgrow="ALWAYS" />
+            <Button onAction="#sendAuth" text="connect" HBox.hgrow="ALWAYS" />
+        </HBox>
+        <HBox fx:id="changeNickname" visible="false">
+            <TextField fx:id="newNickname" promptText="login" HBox.hgrow="ALWAYS" />
+            <Button onAction="#createNewNickname" text="Подтвердить" HBox.hgrow="ALWAYS" />
+            <Button onAction="#cancelNewNickname" text="Отменить" HBox.hgrow="ALWAYS" />
+        </HBox>
+        <MenuBar fx:id="menuBar" visible="false">
+            <Menu text="Фаил">
+                <MenuItem onAction="#changeNewNickname" text="Сменить Никнейм" />
+                <MenuItem onAction="#onlineStatus" text="Сетевой статус" />
+                <MenuItem onAction="#profile" text="Профиль" />
+                <MenuItem onAction="#exit" text="Выход" />
+            </Menu>
+            <Menu text="Настройки">
+                <MenuItem onAction="#textSize" text="Размер текста" />
+                <MenuItem onAction="#minimizeToTrade" text="Свернуть в трейд" />
+                <MenuItem onAction="#fullScreen" text="На весь экран" />
+                <MenuItem onAction="#topWindows" text="Поверх всех окон" />
+            </Menu>
+            <Menu text="Справка">
+                <MenuItem onAction="#showHelp" text="Справка" />
+                <MenuItem onAction="#aboutTheProgram" text="О программе" />
+            </Menu>
+        </MenuBar>
+        <HBox fx:id="chatBox" spacing="5.0" visible="false" VBox.vgrow="ALWAYS">
+            <TextArea fx:id="chatArea" editable="false" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS" />
+            <ListView fx:id="onlineUsers" prefWidth="240.0" />
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </HBox>
+        <HBox fx:id="inputBox" spacing="5.0" visible="false">
+            <TextField fx:id="input" onAction="#pressEnter" prefHeight="80.0" HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnSendMessage" defaultButton="true" lineSpacing="10.0" mnemonicParsing="false" onAction="#btnSend" prefHeight="80.0" prefWidth="73.0" text="SEND" />
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </HBox>
+
+    </children>
+</VBox>

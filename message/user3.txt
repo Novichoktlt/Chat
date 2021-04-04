@@ -1,0 +1,7 @@
+[PRIVATE_MESSAGE] [user3] -> bnikol;
+[PRIVATE_MESSAGE] [user3] -> jkl;
+[PRIVATE_MESSAGE] [user3] -> ghjkl
+[PUBLIC_MESSAGE] [user3] -> gfiuhj
+[PUBLIC_MESSAGE] [user3] -> gfiuhj
+[PUBLIC_MESSAGE] [user3] -> gfiuhj
+[PRIVATE_MESSAGE] [user1] -> chatArea
