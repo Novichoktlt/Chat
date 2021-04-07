@@ -40,3 +40,4 @@
 [PUBLIC_MESSAGE] [user2] -> kkkk
 [PUBLIC_MESSAGE] [user2] -> kkkk
 [PUBLIC_MESSAGE] [user2] -> rrrr
+[PUBLIC_MESSAGE] [user3] ->   executorService.shutdownNow();
