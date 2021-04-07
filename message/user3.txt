@@ -5,3 +5,4 @@
 [PUBLIC_MESSAGE] [user3] -> gfiuhj
 [PUBLIC_MESSAGE] [user3] -> gfiuhj
 [PRIVATE_MESSAGE] [user1] -> chatArea
+[PUBLIC_MESSAGE] [user3] ->   executorService.shutdownNow();

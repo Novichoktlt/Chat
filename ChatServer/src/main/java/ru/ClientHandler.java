@@ -9,6 +9,9 @@ import java.io.IOException;
 import java.net.Socket;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
 
@@ -22,6 +25,8 @@ public class ClientHandler {
     private DataInputStream inputStream;
     private ChatServer chatServer;
     private String currentUserName;
+    private ExecutorService executorService;
+
 
     public ClientHandler(Socket socket, ChatServer chatServer) {
         try {
@@ -33,18 +38,21 @@ public class ClientHandler {
             /**
              * в отдельном потоке запускается авторизация, которая при успехе завершается и запускается бесконечный цикл чтения сообщений
              */
-            new Thread(() -> {
+            ExecutorService executorService = Executors.newCachedThreadPool();
+            executorService.execute(() ->{
                 try {
                     authenticate();
                     readMessages();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-            }).start();
-
+            });
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            executorService.shutdownNow();
         }
+
     }
 
 
@@ -81,6 +89,7 @@ public class ClientHandler {
             e.printStackTrace();
             Thread.currentThread().interrupt();
         } finally {
+
             closeHandler();
         }
     }

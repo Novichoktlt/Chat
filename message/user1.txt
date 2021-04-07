@@ -16,3 +16,4 @@
 [PUBLIC_MESSAGE] [user1] -> ;;;
 [PUBLIC_MESSAGE] [user2] -> rrrr
 [PRIVATE_MESSAGE] [user3] -> chatArea
+[PUBLIC_MESSAGE] [user3] ->   executorService.shutdownNow();
