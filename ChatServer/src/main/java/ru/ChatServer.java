@@ -1,5 +1,7 @@
 package ru;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import ru.auth.AuthService;
 import ru.auth.UserServesBase;
 import ru.messages.MessageDTO;
@@ -10,6 +12,9 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
 
@@ -18,24 +23,29 @@ import java.util.List;
  * При подключении кого-либо, создает ClientHandler и отдает работу ему
  */
 public class ChatServer {
-    private static final int PORT = 65501;
+    public static final Logger LOGGER = LogManager.getLogger(ChatServer.class);
+    private static final int PORT = 65500;
     private List<ClientHandler> onlineClientsList;
     private AuthService authService;
+    private ExecutorService executorService;
 
     public ChatServer() {
         try (ServerSocket serverSocket = new ServerSocket(PORT)) {
-            System.out.println("Server started");
+            LOGGER.info("Server started");
             authService = new UserServesBase();
             authService.start();
             onlineClientsList = new LinkedList<>();
+            executorService = Executors.newCachedThreadPool();
             while (true) {
-                System.out.println("Waiting for connection...");
+                LOGGER.info("Waiting for connection...");
                 Socket socket = serverSocket.accept();
-                System.out.println("Client connected!");
+                LOGGER.info("Client connected!");
                 new ClientHandler(socket, this);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error(e);
+        } finally {
+            executorService.shutdownNow();
         }
     }
 
@@ -84,5 +94,9 @@ public class ChatServer {
 
     public AuthService getAuthService() {
         return authService;
+    }
+
+    public Executor getExecutorService() {
+        return executorService;
     }
 }

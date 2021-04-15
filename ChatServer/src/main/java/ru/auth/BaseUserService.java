@@ -1,9 +1,12 @@
 package ru.auth;
 
-import javax.xml.transform.Result;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.sql.*;
 
 public class BaseUserService {
+    public static final Logger LOGGER = LogManager.getLogger(BaseUserService.class);
     private static BaseUserService instance;
     private final String DRIVER = "org.sqlite.JDBC";
     private final String CONNECTION = "jdbc:sqlite:ChatServer/db/client.db";
@@ -64,13 +67,13 @@ public class BaseUserService {
     private void connect() throws ClassNotFoundException, SQLException {
         Class.forName(DRIVER);
         connection = DriverManager.getConnection(CONNECTION);
-        System.out.println("Connected to DB");
+        LOGGER.info("Connected to DB");
     }
     public void closeConnection(){
 
         try {
             if(connection != null)connection.close();
-            System.out.println("Disconnected from DB");
+            LOGGER.info("Disconnected from DB");
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

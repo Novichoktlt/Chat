@@ -1,0 +1,149 @@
+INFO  2021-04-14 23:24:09 [main] ru.ChatServer (ChatServer.java:30) - Server started
+INFO  2021-04-14 23:24:10 [main] ru.ChatServer (ChatServer.java:35) - Waiting for connection...
+INFO  2021-04-14 23:26:12 [main] ru.ChatServer (ChatServer.java:30) - Server started
+INFO  2021-04-14 23:26:13 [main] ru.auth.BaseUserService (BaseUserService.java:72) - Connected to DB
+INFO  2021-04-14 23:26:13 [main] ru.ChatServer (ChatServer.java:35) - Waiting for connection...
+INFO  2021-04-14 23:26:41 [main] ru.ChatServer (ChatServer.java:37) - Client connected!
+INFO  2021-04-14 23:26:41 [main] ru.ClientHandler (ClientHandler.java:40) - CH created!
+INFO  2021-04-14 23:26:41 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:123) - Authenticate started!
+INFO  2021-04-14 23:26:58 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:141) - received msg 
+INFO  2021-04-14 23:26:59 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:158) - Subscribed
+INFO  2021-04-14 23:32:46 [main] ru.ChatServer (ChatServer.java:30) - Server started
+INFO  2021-04-14 23:32:47 [main] ru.auth.BaseUserService (BaseUserService.java:72) - Connected to DB
+INFO  2021-04-14 23:32:47 [main] ru.ChatServer (ChatServer.java:35) - Waiting for connection...
+INFO  2021-04-14 23:33:08 [main] ru.ChatServer (ChatServer.java:37) - Client connected!
+INFO  2021-04-14 23:33:08 [main] ru.ClientHandler (ClientHandler.java:40) - CH created!
+INFO  2021-04-14 23:33:08 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:123) - Authenticate started!
+INFO  2021-04-14 23:33:19 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:141) - received msg 
+INFO  2021-04-14 23:33:20 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:158) - Subscribed
+INFO  2021-04-14 23:45:35 [main] ru.ChatServer (ChatServer.java:30) - Server started
+INFO  2021-04-14 23:45:35 [main] ru.auth.BaseUserService (BaseUserService.java:72) - Connected to DB
+INFO  2021-04-14 23:45:35 [main] ru.ChatServer (ChatServer.java:35) - Waiting for connection...
+INFO  2021-04-14 23:45:50 [main] ru.ChatServer (ChatServer.java:37) - Client connected!
+INFO  2021-04-14 23:45:50 [main] ru.ClientHandler (ClientHandler.java:40) - CH created!
+INFO  2021-04-14 23:45:50 [main] ru.ChatServer (ChatServer.java:35) - Waiting for connection...
+INFO  2021-04-14 23:45:51 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:120) - Authenticate started!
+INFO  2021-04-14 23:46:10 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:138) - received msg 
+INFO  2021-04-14 23:46:10 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:155) - Subscribed
+INFO  2021-04-15 00:01:50 [main] ru.ChatServer (ChatServer.java:34) - Server started
+INFO  2021-04-15 00:01:51 [main] ru.auth.BaseUserService (BaseUserService.java:72) - Connected to DB
+INFO  2021-04-15 00:01:51 [main] ru.ChatServer (ChatServer.java:40) - Waiting for connection...
+INFO  2021-04-15 00:02:05 [main] ru.ChatServer (ChatServer.java:42) - Client connected!
+INFO  2021-04-15 00:02:05 [main] ru.ClientHandler (ClientHandler.java:40) - CH created!
+INFO  2021-04-15 00:02:05 [main] ru.ChatServer (ChatServer.java:40) - Waiting for connection...
+INFO  2021-04-15 00:02:05 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:121) - Authenticate started!
+INFO  2021-04-15 00:02:16 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:139) - received msg 
+INFO  2021-04-15 00:02:16 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:156) - Subscribed
+INFO  2021-04-15 00:02:44 [main] ru.ChatServer (ChatServer.java:42) - Client connected!
+INFO  2021-04-15 00:02:44 [main] ru.ClientHandler (ClientHandler.java:40) - CH created!
+INFO  2021-04-15 00:02:44 [main] ru.ChatServer (ChatServer.java:40) - Waiting for connection...
+INFO  2021-04-15 00:02:44 [pool-2-thread-2] ru.ClientHandler (ClientHandler.java:121) - Authenticate started!
+INFO  2021-04-15 00:02:56 [pool-2-thread-2] ru.ClientHandler (ClientHandler.java:139) - received msg 
+INFO  2021-04-15 00:02:56 [pool-2-thread-2] ru.ClientHandler (ClientHandler.java:156) - Subscribed
+INFO  2021-04-15 00:07:04 [main] ru.ChatServer (ChatServer.java:34) - Server started
+INFO  2021-04-15 00:07:05 [main] ru.auth.BaseUserService (BaseUserService.java:72) - Connected to DB
+INFO  2021-04-15 00:07:05 [main] ru.ChatServer (ChatServer.java:40) - Waiting for connection...
+INFO  2021-04-15 00:07:20 [main] ru.ChatServer (ChatServer.java:42) - Client connected!
+INFO  2021-04-15 00:07:20 [main] ru.ClientHandler (ClientHandler.java:40) - CH created!
+INFO  2021-04-15 00:07:20 [main] ru.ChatServer (ChatServer.java:40) - Waiting for connection...
+INFO  2021-04-15 00:07:20 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:121) - Authenticate started!
+INFO  2021-04-15 00:07:48 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:139) - received msg 
+INFO  2021-04-15 00:07:48 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:156) - Subscribed
+ERROR 2021-04-15 00:07:57 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:90) - java.net.SocketException: Connection reset
+INFO  2021-04-15 00:14:33 [main] ru.ChatServer (ChatServer.java:34) - Server started
+INFO  2021-04-15 00:14:34 [main] ru.auth.BaseUserService (BaseUserService.java:72) - Connected to DB
+INFO  2021-04-15 00:14:34 [main] ru.ChatServer (ChatServer.java:40) - Waiting for connection...
+INFO  2021-04-15 00:14:48 [main] ru.ChatServer (ChatServer.java:42) - Client connected!
+INFO  2021-04-15 00:14:48 [main] ru.ClientHandler (ClientHandler.java:40) - CH created!
+INFO  2021-04-15 00:14:48 [main] ru.ChatServer (ChatServer.java:40) - Waiting for connection...
+INFO  2021-04-15 00:14:48 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:121) - Authenticate started!
+ERROR 2021-04-15 00:14:57 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:164) - java.net.SocketException: Connection reset
+ERROR 2021-04-15 00:14:57 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:90) - java.net.SocketException: Socket closed
+INFO  2021-04-15 00:17:36 [main] ru.ChatServer (ChatServer.java:34) - Server started
+INFO  2021-04-15 00:17:37 [main] ru.auth.BaseUserService (BaseUserService.java:72) - Connected to DB
+INFO  2021-04-15 00:17:37 [main] ru.ChatServer (ChatServer.java:40) - Waiting for connection...
+INFO  2021-04-15 00:17:48 [main] ru.ChatServer (ChatServer.java:42) - Client connected!
+INFO  2021-04-15 00:17:48 [main] ru.ClientHandler (ClientHandler.java:40) - CH created!
+INFO  2021-04-15 00:17:48 [main] ru.ChatServer (ChatServer.java:40) - Waiting for connection...
+INFO  2021-04-15 00:17:48 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:121) - Authenticate started!
+ERROR 2021-04-15 00:17:56 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:164) - Error
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:981) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:976) ~[?:?]
+	at java.io.DataInputStream.readUnsignedShort(DataInputStream.java:341) ~[?:?]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:593) ~[?:?]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:568) ~[?:?]
+	at ru.ClientHandler.authenticate(ClientHandler.java:137) ~[classes/:?]
+	at ru.ClientHandler.lambda$new$0(ClientHandler.java:46) ~[classes/:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at java.lang.Thread.run(Thread.java:832) [?:?]
+ERROR 2021-04-15 00:17:56 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:90) - java.net.SocketException: Socket closed
+INFO  2021-04-15 00:19:48 [main] ru.ChatServer (ChatServer.java:34) - Server started
+INFO  2021-04-15 00:19:49 [main] ru.auth.BaseUserService (BaseUserService.java:72) - Connected to DB
+INFO  2021-04-15 00:19:49 [main] ru.ChatServer (ChatServer.java:40) - Waiting for connection...
+INFO  2021-04-15 00:20:07 [main] ru.ChatServer (ChatServer.java:42) - Client connected!
+INFO  2021-04-15 00:20:07 [main] ru.ClientHandler (ClientHandler.java:40) - CH created!
+INFO  2021-04-15 00:20:07 [main] ru.ChatServer (ChatServer.java:40) - Waiting for connection...
+INFO  2021-04-15 00:20:07 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:121) - Authenticate started!
+ERROR 2021-04-15 00:20:13 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:164) - Error
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:981) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:976) ~[?:?]
+	at java.io.DataInputStream.readUnsignedShort(DataInputStream.java:341) ~[?:?]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:593) ~[?:?]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:568) ~[?:?]
+	at ru.ClientHandler.authenticate(ClientHandler.java:137) ~[classes/:?]
+	at ru.ClientHandler.lambda$new$0(ClientHandler.java:46) ~[classes/:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at java.lang.Thread.run(Thread.java:832) [?:?]
+ERROR 2021-04-15 00:20:13 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:90) - java.net.SocketException: Socket closed
+INFO  2021-04-15 00:20:47 [main] ru.ChatServer (ChatServer.java:34) - Server started
+INFO  2021-04-15 00:20:48 [main] ru.auth.BaseUserService (BaseUserService.java:72) - Connected to DB
+INFO  2021-04-15 00:20:48 [main] ru.ChatServer (ChatServer.java:40) - Waiting for connection...
+INFO  2021-04-15 00:21:02 [main] ru.ChatServer (ChatServer.java:42) - Client connected!
+INFO  2021-04-15 00:21:02 [main] ru.ClientHandler (ClientHandler.java:40) - CH created!
+INFO  2021-04-15 00:21:03 [main] ru.ChatServer (ChatServer.java:40) - Waiting for connection...
+INFO  2021-04-15 00:21:03 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:121) - Authenticate started!
+ERROR 2021-04-15 00:21:08 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:164) - java.net.SocketException: Connection reset
+ERROR 2021-04-15 00:21:08 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:90) - java.net.SocketException: Socket closed
+INFO  2021-04-15 00:23:28 [main] ru.ChatServer (ChatServer.java:34) - Server started
+INFO  2021-04-15 00:23:30 [main] ru.auth.BaseUserService (BaseUserService.java:70) - Connected to DB
+INFO  2021-04-15 00:23:30 [main] ru.ChatServer (ChatServer.java:40) - Waiting for connection...
+INFO  2021-04-15 00:23:40 [main] ru.ChatServer (ChatServer.java:42) - Client connected!
+INFO  2021-04-15 00:23:40 [main] ru.ClientHandler (ClientHandler.java:40) - CH created!
+INFO  2021-04-15 00:23:40 [main] ru.ChatServer (ChatServer.java:40) - Waiting for connection...
+INFO  2021-04-15 00:23:40 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:121) - Authenticate started!
+ERROR 2021-04-15 00:23:46 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:164) - java.net.SocketException: Connection reset
+ERROR 2021-04-15 00:23:46 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:90) - java.net.SocketException: Socket closed
+INFO  2021-04-15 00:27:24 [main] ru.ChatServer (ChatServer.java:34) - Server started
+INFO  2021-04-15 00:27:25 [main] ru.auth.BaseUserService (BaseUserService.java:70) - Connected to DB
+INFO  2021-04-15 00:27:25 [main] ru.ChatServer (ChatServer.java:40) - Waiting for connection...
+INFO  2021-04-15 00:27:43 [main] ru.ChatServer (ChatServer.java:42) - Client connected!
+INFO  2021-04-15 00:27:43 [main] ru.ClientHandler (ClientHandler.java:40) - CH created!
+INFO  2021-04-15 00:27:43 [main] ru.ChatServer (ChatServer.java:40) - Waiting for connection...
+INFO  2021-04-15 00:27:43 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:121) - Authenticate started!
+INFO  2021-04-15 00:28:03 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:139) - received msg 
+INFO  2021-04-15 00:28:03 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:156) - Subscribed
+INFO  2021-04-15 00:29:50 [main] ru.ChatServer (ChatServer.java:42) - Client connected!
+INFO  2021-04-15 00:29:50 [main] ru.ClientHandler (ClientHandler.java:40) - CH created!
+INFO  2021-04-15 00:29:50 [main] ru.ChatServer (ChatServer.java:40) - Waiting for connection...
+INFO  2021-04-15 00:29:50 [pool-2-thread-2] ru.ClientHandler (ClientHandler.java:121) - Authenticate started!
+INFO  2021-04-15 00:30:02 [pool-2-thread-2] ru.ClientHandler (ClientHandler.java:139) - received msg 
+INFO  2021-04-15 00:30:02 [pool-2-thread-2] ru.ClientHandler (ClientHandler.java:156) - Subscribed
+INFO  2021-04-15 00:30:08 [pool-2-thread-2] ru.ClientHandler (ClientHandler.java:82) - Клиент прислал сообщение
+ERROR 2021-04-15 00:30:49 [pool-2-thread-2] ru.ClientHandler (ClientHandler.java:90) - java.net.SocketException: Connection reset
+ERROR 2021-04-15 00:30:51 [pool-2-thread-1] ru.ClientHandler (ClientHandler.java:90) - java.net.SocketException: Connection reset
+INFO  2021-04-15 00:32:16 [main] ru.ChatServer (ChatServer.java:42) - Client connected!
+INFO  2021-04-15 00:32:16 [main] ru.ClientHandler (ClientHandler.java:40) - CH created!
+INFO  2021-04-15 00:32:16 [main] ru.ChatServer (ChatServer.java:40) - Waiting for connection...
+INFO  2021-04-15 00:32:16 [pool-2-thread-3] ru.ClientHandler (ClientHandler.java:121) - Authenticate started!
+ERROR 2021-04-15 00:32:25 [pool-2-thread-3] ru.ClientHandler (ClientHandler.java:164) - java.net.SocketException: Connection reset
+ERROR 2021-04-15 00:32:25 [pool-2-thread-3] ru.ClientHandler (ClientHandler.java:90) - java.net.SocketException: Socket closed

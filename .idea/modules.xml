@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/ChatClientNetwork/ChatClientNetwork.iml" filepath="$PROJECT_DIR$/ChatClientNetwork/ChatClientNetwork.iml" />
       <module fileurl="file://$PROJECT_DIR$/ChatCommon/ChatCommon.iml" filepath="$PROJECT_DIR$/ChatCommon/ChatCommon.iml" />
       <module fileurl="file://$PROJECT_DIR$/ChatServer/ChatServer.iml" filepath="$PROJECT_DIR$/ChatServer/ChatServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson/lesson.iml" filepath="$PROJECT_DIR$/lesson/lesson.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/чат.iml" filepath="$PROJECT_DIR$/.idea/чат.iml" />
     </modules>
   </component>

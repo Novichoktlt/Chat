@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="lesson" />
         <module name="ChatClient" />
         <module name="ChatServer" />
         <module name="ChatClientNetwork" />
@@ -18,6 +19,7 @@
       <module name="ChatCommon" target="15" />
       <module name="ChatServer" target="15" />
       <module name="ConSqlite" target="15" />
+      <module name="lesson" target="15" />
     </bytecodeTargetLevel>
   </component>
 </project>

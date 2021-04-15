@@ -1,5 +1,7 @@
 package ru;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import ru.messages.MessageDTO;
 import ru.messages.MessageType;
 
@@ -20,12 +22,13 @@ import java.util.concurrent.Executors;
  * обрабатывает отправку сообщений данному конкретному клиенту и обработку сообщений, поступивших от клиента
  */
 public class ClientHandler {
+    public static final Logger LOGGER = LogManager.getLogger(ClientHandler.class);
     private Socket socket;
     private DataOutputStream outputStream;
     private DataInputStream inputStream;
     private ChatServer chatServer;
     private String currentUserName;
-    private ExecutorService executorService;
+
 
 
     public ClientHandler(Socket socket, ChatServer chatServer) {
@@ -34,23 +37,21 @@ public class ClientHandler {
             this.socket = socket;
             this.inputStream = new DataInputStream(socket.getInputStream());
             this.outputStream = new DataOutputStream(socket.getOutputStream());
-            System.out.println("CH created!");
+            LOGGER.info("CH created!");
             /**
              * в отдельном потоке запускается авторизация, которая при успехе завершается и запускается бесконечный цикл чтения сообщений
              */
-            ExecutorService executorService = Executors.newCachedThreadPool();
-            executorService.execute(() ->{
+            chatServer.getExecutorService().execute(() ->{
                 try {
                     authenticate();
                     readMessages();
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    LOGGER.error(e);
                 }
             });
         } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            executorService.shutdownNow();
+            LOGGER.error(e);
+
         }
 
     }
@@ -65,7 +66,7 @@ public class ClientHandler {
         try {
             outputStream.writeUTF(dto.convertToJson());
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error(e);
         }
     }
 
@@ -78,7 +79,7 @@ public class ClientHandler {
                 String msg = inputStream.readUTF();
                 MessageDTO dto = MessageDTO.convertFromJson(msg);
                 dto.setFrom(currentUserName);
-
+                LOGGER.info("Клиент прислал сообщение");
                 switch (dto.getMessageType()) {
                     case PUBLIC_MESSAGE -> chatServer.broadcastMessage(dto);
                     case PRIVATE_MESSAGE -> chatServer.sendPrivateMessage(dto);
@@ -86,7 +87,7 @@ public class ClientHandler {
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error(e);
             Thread.currentThread().interrupt();
         } finally {
 
@@ -105,7 +106,7 @@ public class ClientHandler {
 
         }else{
             response.setMessageType(MessageType.ERROR_MESSAGE);
-            response.setBody("Error changing username");
+            LOGGER.info("Error changing username");
         }
         sendMessage(response);
 
@@ -117,7 +118,7 @@ public class ClientHandler {
      */
     private void authenticate() {
         Timer timer = new Timer();
-        System.out.println("Authenticate started!");
+        LOGGER.info("Authenticate started!");
         try {
             while (true) {
                 timer.schedule(new TimerTask() {
@@ -126,7 +127,7 @@ public class ClientHandler {
                         try {
                             socket.close();
                            } catch (IOException e) {
-                            e.printStackTrace();
+                            LOGGER.error(e);
 
                         }
 
@@ -135,24 +136,24 @@ public class ClientHandler {
 
                 String authMessage = inputStream.readUTF();
                 if (timer != null) timer.cancel();
-                System.out.println("received msg ");
+                LOGGER.info("received msg ");
                 MessageDTO dto = MessageDTO.convertFromJson(authMessage);
                 String username = chatServer.getAuthService().getUsernameByLoginPass(dto.getLogin(), dto.getPassword());
                 MessageDTO response = new MessageDTO();
                 if (username == null) {
                     response.setMessageType(MessageType.ERROR_MESSAGE);
                     response.setBody("Wrong login or pass!");
-                    System.out.println("Wrong auth");
+                    LOGGER.info("Wrong auth");
                 } else if (chatServer.isUserBusy(username)) {
                     response.setMessageType(MessageType.ERROR_MESSAGE);
                     response.setBody("U're clone!!!");
-                    System.out.println("Clone");
+                    LOGGER.info("Clone");
                 } else {
                     response.setMessageType(MessageType.AUTH_CONFIRM);
                     response.setBody(username);
                     currentUserName = username;
                     chatServer.subscribe(this);
-                    System.out.println("Subscribed");
+                    LOGGER.info("Subscribed");
                     sendMessage(response);
                     break;
                 }
@@ -160,7 +161,7 @@ public class ClientHandler {
 
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error(e);
             closeHandler();
 
         }
@@ -174,7 +175,7 @@ public class ClientHandler {
             chatServer.unsubscribe(this);
             socket.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error(e);
         }
     }
 
